@@ -1,7 +1,7 @@
 # EnHom's Blog 
 Powered by Chirpy which is a Jekyll theme for github pages.
 
-![logo](favicon.svg "assets/img/favicons") 
+![logo](assets/img/favicons/favicon.svg "logo") 
 
 ## Usage
 

@@ -1,9 +1,15 @@
 ---
+layout: post
 title: "What is FFT?"
+subtitle: "just test"
 date: 2025-06-05 14:15:00 +0800
+update: 2025-06-05 22:25:00 +0800
+author: "EnHom"
+header-img: "img/zerotier.jpg"
 categories: [学习笔记]
 tags: [math, time_series]     # TAG names should always be lowercase
 img_path: /assets/img/
+math: true
 ---
 
 在时间序列、数字信号的数据处理中经常会看到使用FFT作为一段数据中提取频率的手段，但是往往文中没有花大笔墨去解释，仿佛所有人都了解这个概念。

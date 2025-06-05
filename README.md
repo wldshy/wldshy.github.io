@@ -1,7 +1,7 @@
 # EnHom's Blog 
 Powered by Chirpy which is a Jekyll theme for github pages.
 
-![logo](assets/img/favicons/web-app-manifest-512x512.png "logo") 
+![logo](assets/img/favicons/web-app-manifest-192x192.png "logo") 
 
 ## Usage
 

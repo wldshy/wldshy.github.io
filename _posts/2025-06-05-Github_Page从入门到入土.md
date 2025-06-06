@@ -1,12 +1,8 @@
 ---
-layout:     post
 title:      "Github_Page从入门到入土"
-subtitle:   ""
-date:       2025-06-05 14:15:00 +0800
-update:     2025-06-06
+date:       2025-06-06 14:15:00 +0800
 categories: [学习笔记]
 tags:       [jekyll]     
-author:     "EnHom"
 mathjax:    false
 ---
 

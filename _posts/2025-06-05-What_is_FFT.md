@@ -1,12 +1,8 @@
 ---
-layout:     post
 title:      "what is FFT？"
-subtitle:   "Time vs. Frequency"
 date:       2025-04-19
-update:     2025-04-29
 categories: [Note123]
 tags:       [math, time_series, signal processing] 
-author:     "EnHom"
 mathjax:    true
 ---
 

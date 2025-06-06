@@ -1,5 +1,5 @@
 ---
-title: "2025-06-05-Github_Page从入门到入土"
+title: "Github_Page从入门到入土"
 date: 2025-06-05 14:15:00 +0800
 categories: [学习笔记]
 tags: [Jekyll]     # TAG names should always be lowercase
@@ -314,4 +314,60 @@ Chirpy可以直接通过前往官方的模版页面Chirpy Start部署：点击�
 暂时还没想好，不过可以参考以下链接：
 
     https://ittousei.github.io/posts/customize-my-blog/
+
+## 让网页显示数学公式
+在上传一篇文献阅读笔记到Github page时发现公式无法正常显示，比较常用的一种方式就是借用MathJax帮助渲染。
+
+在_includes文件夹中添加mathjax_support.html文件，内容如下：
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: {
+            autoNumber: "AMS"
+            }
+        },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        "HTML-CSS": { fonts: ["TeX"] }
+        }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+        });
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+        });
+    </script>
+    <script
+    type="text/javascript"
+    async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+
+其中 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" 这一行不可以被替换。
+
+因为这个mathjax挺消耗性能的，而且比较慢，如果文章里根本没有公式，最好就别加载了。因此在_layouts/default.html中再添加一个开关，如果文章里用了公式，多添加使能即可。以下内容添加到_layouts/default.html中调用（调用位置为 {% include head.html %} 下面一行）
+
+    {% if page.mathjax %}
+    {% include mathjax_support.html %}
+    {% endif %}
+
+做好这两步之后，只需要在需要用到公式渲染的文章开头添加上mathjax: true即可，如下：
+
+    layout:     post
+    title:      "what is FFT？"
+    subtitle:   "Time vs. Frequency"
+    date:       2025-04-19
+    update:     2025-04-29
+    categories: [Note123]
+    tags:       [math, time_series, signal processing] 
+    author:     "EnHom"
+    header-img: "img/.jpg"
+    mathjax:    true
+
 

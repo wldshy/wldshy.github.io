@@ -1,5 +1,5 @@
 ---
-title:      "Github_Page从入门到入土"
+title:      "Github_Pages从入门到入土"
 date:       2025-06-06 14:15:00 +0800
 categories: [学习笔记]
 tags:       [jekyll]     
@@ -379,15 +379,10 @@ Chirpy可以直接通过前往官方的模版页面Chirpy Start部署：点击�
 
 做好这两步之后，只需要在需要用到公式渲染的文章开头添加上mathjax: true即可，如下：
 
-    layout:     post
     title:      "what is FFT？"
-    subtitle:   "Time vs. Frequency"
     date:       2025-04-19
-    update:     2025-04-29
     categories: [Note123]
     tags:       [math, time_series, signal processing] 
-    author:     "EnHom"
-    header-img: "img/.jpg"
     mathjax:    true
 
 

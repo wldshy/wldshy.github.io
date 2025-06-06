@@ -7,7 +7,6 @@ update:     2025-04-29
 categories: [Note123]
 tags:       [math, time_series, signal processing] 
 author:     "EnHom"
-header-img: "img/.jpg"
 mathjax:    true
 ---
 

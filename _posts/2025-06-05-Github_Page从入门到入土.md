@@ -1,9 +1,13 @@
 ---
-title: "Github_Page从入门到入土"
-date: 2025-06-05 14:15:00 +0800
+layout:     post
+title:      "Github_Page从入门到入土"
+subtitle:   ""
+date:       2025-06-05 14:15:00 +0800
+update:     2025-06-06
 categories: [学习笔记]
-tags: [Jekyll]     # TAG names should always be lowercase
-img_path: /assets/img/
+tags:       [jekyll]     
+author:     "EnHom"
+mathjax:    false
 ---
 
 
@@ -309,6 +313,25 @@ Chirpy可以直接通过前往官方的模版页面Chirpy Start部署：点击�
         $ git push origin main
 
 更新后的网页会自动部署到GitHub Page上。
+
+有时会提示要求输入账号密码，但其实在2021年8月13号之后必须用ssh keys作为验证的token，别的都不好使。这时查看需要查看这个项目的remote到底是什么
+
+    $ git config --get remote.origin.url
+
+如果返回的是
+
+    https://github.com/xxxx/xxxx.github.io.git
+
+这证实在clone的时候误用了https协议，https协议会每次要求你输入账户密码。于是我们需要更改remote协议
+
+    $ git remote set-url origin git@github.com:xxxx/xxxx.github.io.git
+
+再次查看remote协议，得到
+
+    $ git@github.com：xxxx/xxxx.github.io.git
+
+再次尝试git push，一切顺利！
+
 
 # 5. 炉火纯青——个性化调整与美化
 暂时还没想好，不过可以参考以下链接：

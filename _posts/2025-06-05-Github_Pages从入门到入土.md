@@ -386,8 +386,44 @@ Chirpy可以直接通过前往官方的模版页面Chirpy Start部署：点击�
     mathjax:    true
 
 
+## 5.2 PicGo图床的搭建
+
+### 创建仓库
+
+创建Public仓库，建议能做到“顾名思义”，这里取名为blog_assets，分支名默认为main。
+
+### 生成Token
+
+进入 Settings → Developer settings → Personal access tokens → Tokens(classic) 点击 Generate new token → Generate new token(classic)。
+
+勾选 repo 权限，生成后立即保存 Token（仅显示一次）。
+
+### 配置PicGo
+
+官方下载地址：https://github.com/Molunerfinn/PicGo/releases
+
+Linux系统选择Applmage后缀的版本，安装后配置GitHub图床
+
+    仓库名：用户名/仓库名（如wldshy/blog_assets）。
+    分支：main（必须与仓库实际分支一致）。
+    Token：填写生成的 Token。
+    设定存储路径：如images/
+    自定义域名：https://cdn.jsdelivr.net/gh/用户名/仓库名@main
+
+配置完回到上传区，测试配置是否成功。
+
+### 集成VSCode
+
+安装插件PicGo，在设置中选择GitHub作为图床并填写与上面相同配置。
+
+安装xclip
+
+    $ sudo apt install xclip
 
 
-## 暂时还没想好，不过可以参考以下链接：
+现在可以使用捷键Ctrl+Alt+U快速上传剪贴板中的截图内容并自动获得相应的链接地址了。
+
+
+## 5.x 暂时还没想好，不过可以参考以下链接：
 
     https://ittousei.github.io/posts/customize-my-blog/
